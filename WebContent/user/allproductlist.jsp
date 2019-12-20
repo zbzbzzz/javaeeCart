@@ -66,8 +66,8 @@
                                                                             <div class="label-product label-new">${product.plabel}</div>
                                                                             <a href="Common/Product/get?pid=${product.pid}">
                                                                             
-                                                                                <img src="${product.productImgs[0].imgurl}" alt="Proin Lectus Ipsum" class="hover-image">
-                                                                                <img src="${product.productImgs[1].imgurl}" alt="Proin Lectus Ipsum" title="Proin Lectus Ipsum">
+                                                                                <img src="cart/${product.productImgs[0].imgurl}" alt="Proin Lectus Ipsum" class="hover-image">
+                                                                                <img src="cart/${product.productImgs[1].imgurl}" alt="Proin Lectus Ipsum" title="Proin Lectus Ipsum">
                                                                             
                                                                             </a>
                                                                             <div class="action-links">
@@ -113,8 +113,8 @@
                                                                             <div class="product-image mb-4 mb-md-0 mr-md-4 mr-xl-5">
                                                                                 <div class="label-product label-new">${product.plabel}</div>
                                                                                 <a href="Common/Product/get?pid=${product.pid}">
-                                                                                    <img src="${product.productImgs[0].imgurl}" alt="Proin Lectus Ipsum" class="hover-image">
-                                                                                    <img src="${product.productImgs[1].imgurl}" alt="Proin Lectus Ipsum" title="Proin Lectus Ipsum">
+                                                                                    <img src="cart/${product.productImgs[0].imgurl}" alt="Proin Lectus Ipsum" class="hover-image">
+                                                                                    <img src="cart/${product.productImgs[1].imgurl}" alt="Proin Lectus Ipsum" title="Proin Lectus Ipsum">
                                                                                 </a>
                                                                                 <div class="action-links">
                                                                                     <a class="action-btn btn-cart" href="javascript:void(0)" title="加入购物车" pid="${product.pid}"><i class="pe-7s-cart"></i></a>

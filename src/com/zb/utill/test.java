@@ -28,9 +28,7 @@ import javafx.beans.binding.BooleanBinding;
 public class test {
 
 	@Test
-	public void test(){
-		
-		
+	public void test(){	
 		StatisticsDao name = new StatisticsDao();
 		Map<String, List<Object>> list=name.OrderStatisticsByDate();
 		System.out.println(list);

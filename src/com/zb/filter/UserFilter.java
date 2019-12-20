@@ -35,7 +35,7 @@ public class UserFilter implements Filter {
 		uri = StringUtils.remove(uri, contextPath+"/");
 		String servletPath = StringUtils.substringBetween(uri, "/", "/");	
 		if (uri.startsWith("Common/")&&!servletPath.equals("Product")&&!servletPath.equals("User")&&!servletPath.equals("Search")) {
-			request.setAttribute("warning","不要搞事情");
+			request.setAttribute("warning","非法操作");
 			request.getRequestDispatcher("/user/login.jsp").forward(request, response);
 			return;
 		}
@@ -43,10 +43,10 @@ public class UserFilter implements Filter {
 			if(request.getSession().getAttribute("user")==null)
 			{
 				if( StringUtils.substringAfterLast(uri, "/").contains("ajax"))
-					response.getWriter().println("宁先登录在操作行吗");
+					response.getWriter().println("请登录");
 				else
 				{
-					request.setAttribute("warning","宁先登录在操作行吗");
+					request.setAttribute("warning","请登录");
 					request.getRequestDispatcher("/user/login.jsp").forward(request, response);
 				}
 				return;

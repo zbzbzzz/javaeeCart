@@ -137,7 +137,9 @@ function cartlist() {
 			toastr.success("成功",result,{timeOut: 900});
 		else{
 	    if(result.indexOf("登录")>-1)
-				toastr.warning("警告",result,{timeOut: 1500});
+	    	{
+				window.location.href="/cart/User/login.jsp";
+	    	}
 			else{
 		       if(result.indexOf("失败")>-1)
 		    	   toastr.error("失败",result,{timeOut: 1500});
