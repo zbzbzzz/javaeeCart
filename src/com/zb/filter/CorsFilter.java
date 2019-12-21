@@ -36,7 +36,7 @@ public class CorsFilter implements Filter {
 				HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
         // 跨域配置多域名访问
-        String [] allowDomain= {"http://localhost:9001","http://www.zbzbzzz.top"}; 
+        String [] allowDomain= {"http://localhost:9001","http://www.zbzbzzz.top","http://localhost:8080"}; 
         Set allowedOrigins= new HashSet(Arrays.asList(allowDomain)); 
         String originHeader=((HttpServletRequest) req).getHeader("Origin"); 
         if (allowedOrigins.contains(originHeader)){ 

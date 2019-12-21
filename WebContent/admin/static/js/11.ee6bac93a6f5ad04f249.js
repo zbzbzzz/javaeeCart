@@ -1,0 +1,2 @@
+webpackJsonp([11],{OPnq:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  促销管理\n")])},staticRenderFns:[]};var i=t("C7Lr")({name:"promotion"},r,!1,function(e){t("feW1")},"data-v-37681487",null);n.default=i.exports},feW1:function(e,n){}});
+//# sourceMappingURL=11.ee6bac93a6f5ad04f249.js.map
