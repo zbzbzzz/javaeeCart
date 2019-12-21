@@ -2,6 +2,9 @@ package com.zb.filter;
 
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -32,11 +35,17 @@ public class CorsFilter implements Filter {
 			throws IOException, ServletException {
 				HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
-		response.addHeader("Access-Control-Allow-Origin", "http://localhost:9001");
+        // 跨域配置多域名访问
+        String [] allowDomain= {"http://localhost:9001","http://www.zbzbzzz.top"}; 
+        Set allowedOrigins= new HashSet(Arrays.asList(allowDomain)); 
+        String originHeader=((HttpServletRequest) req).getHeader("Origin"); 
+        if (allowedOrigins.contains(originHeader)){ 
+		response.addHeader("Access-Control-Allow-Origin", originHeader);
         response.addHeader("Access-Control-Allow-Methods", "OPTIONS,GET, POST, PUT, DELETE");
         response.addHeader("Access-Control-Max-Age", "1800");//30 min
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+        }
         if("OPTIONS".equals(request.getMethod()))
         {
         	response.setStatus(200);
